@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zhang Yukai | Personal Profile</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1f2937, #374151);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 20px;
+      background: #ddd;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #e5e7eb;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #1f2937;
+    }
+
+    .btn-secondary {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    nav {
+      background: white;
+      padding: 14px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      text-align: center;
+    }
+
+    nav a {
+      color: #374151;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 28px;
+      padding: 32px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    section h2 {
+      font-size: 1.7rem;
+      margin-bottom: 18px;
+      color: #111827;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #eef2ff;
+      color: #3730a3;
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px;
+      background: #fafafa;
+    }
+
+    .project-card h3 {
+      margin-bottom: 8px;
+      color: #1f2937;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: white;
+      background: #2563eb;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .social-links a:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #374151;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    button {
+      border: none;
+      background: #111827;
+      color: white;
+      padding: 13px 18px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #374151;
+      transform: translateY(-2px);
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
+      }
+
+      section {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="home">
+    <!-- Replace profile.jpg with your own image file, or remove this img tag first -->
+    <img src="profile.jpg" alt="Profile photo" />
+
+    <h1>Zhang Yukai</h1>
+    <p>
+      Computer Science student interested in AI, software development, data analysis,
+      and building useful digital products.
+    </p>
+
+    <div class="btn-group">
+      <a class="btn btn-primary" href="#contact">Contact Me</a>
+      <a class="btn btn-secondary" href="#projects">View Projects</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#social">Social</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi, I am Zhang Yukai. I am currently studying Computer Science and developing
+        my skills in programming, data analysis, web development, and artificial intelligence.
+        I enjoy learning how technology can be used to solve real-world problems and build
+        practical applications.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">Java</span>
+        <span class="skill">SQL</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Data Analysis</span>
+        <span class="skill">Machine Learning</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Personal Profile Website</h3>
+          <p>
+            A responsive personal website used to introduce myself, share social links,
+            and receive visitor messages through a contact form.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Data Analysis Project</h3>
+          <p>
+            Applied data preprocessing, modelling, and visualization techniques to analyse
+            survey or real-world datasets.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Software Development Project</h3>
+          <p>
+            Built applications using programming concepts such as object-oriented design,
+            database interaction, and user interface development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="social">
+      <h2>Social Links</h2>
+      <p>You can find me on these platforms:</p>
+      <br />
+      <div class="social-links">
+        <!-- Replace these URLs with your real profile links -->
+        <a href="https://www.instagram.com/your_username" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/your_profile" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://github.com/your_github_username" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/your_linkedin_username" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Leave a Message</h2>
+      <p>
+        Send me a message using the form below. The message can be forwarded to my email
+        after connecting the form with Formspree.
+      </p>
+      <br />
+
+      <!--
+        IMPORTANT:
+        1. Go to https://formspree.io/
+        2. Create a new form
+        3. Replace the action URL below with your own Formspree endpoint
+
+        Example:
+        action="https://formspree.io/f/abcxyzde"
+      -->
+      <form action="https://formspree.io/f/your_form_id" method="POST">
+        <div>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+
+        <div>
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p class="note">
+        Note: The message form will only work after you replace the Formspree endpoint.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Zhang Yukai. All rights reserved.</p>
+  </footer>
+</body>
+</html>
